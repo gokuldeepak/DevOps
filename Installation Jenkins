@@ -1,5 +1,20 @@
+# ubuntu 18.04
+
+sudo apt update
+sudo apt-get install openjdk-11-jre.
+java -version
+sudo apt-get install openjdk-11-jdk
+javac -version
+
+sudo vi /etc/environment
+  JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+source /etc/environment
+echo $JAVA_HOME
+
+
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
     /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
 sudo apt-get install jenkins
+service jenkins start
