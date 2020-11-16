@@ -1,0 +1,19 @@
+For ubuntu 18.04
+
+go to maven.apache.org/download.cgi
+copy Binary.tar.gz file  
+
+mkdir /opt/maven/
+cd /opt/maven/
+wget https://maven.apache.org/......tar.gz
+tar -xvf apache-maven-3.0.6.tar.gz
+
+vi /etc/environment
+M2_HOME=/opt/maven/apache-maven-3.0.6
+M2=$M2_HOME/bin
+
+source /etc/environment
+
+mvn -version
+
+mvn clean install
