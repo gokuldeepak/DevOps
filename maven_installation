@@ -14,6 +14,20 @@ M2=$M2_HOME/bin
 
 source /etc/environment
 
+#optional
+#vi /etc/profile.d/maven.sh
+   export JAVA_HOME=/usr/lib/jvm/default-java
+   export M2_HOME=/opt/maven
+   export MAVEN_HOME=/opt/maven
+   export PATH=${M2-HOME}/bin:${PATH}
+sudo chmod +x /etc/profile.d/maven.sh
+source /etc/profile.d/maven.sh
+
+
 mvn -version
 
+
+
 mvn clean install
+
+
