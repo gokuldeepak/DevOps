@@ -1,9 +1,10 @@
 # ubuntu 18.04
 
 sudo apt update
-sudo apt-get install openjdk-11-jre
+sudo apt-get install openjdk-8-jre    // version 11.0.9 was not supported by jenkins sudo apt-get install openjdk-11-jre
+
 java -version
-sudo apt-get install openjdk-11-jdk
+sudo apt-get install openjdk-8-jdk    // version 11.0.7 is supported but not 11.0.9 sudo apt-get install openjdk-11-jdk
 javac -version
 
 sudo vi /etc/environment
